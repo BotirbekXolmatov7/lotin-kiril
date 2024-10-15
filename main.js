@@ -1,3 +1,5 @@
+const latinInput = document.getElementById('latinInput')
+
 const latinToCyrillicMap = {
     "A": "А", "B": "Б", "D": "Д", "E": "Е", "F": "Ф", "G": "Г", "H": "Ҳ", "I": "И", "J": "Ж", 
     "K": "К", "L": "Л", "M": "М", "N": "Н", "O": "О", "P": "П", "Q": "Қ", "R": "Р", "S": "С", 
@@ -26,7 +28,7 @@ function latinToCyrillic(text) {
     return result;
 }
 
-document.getElementById('latinInput').addEventListener('keyup', () => {
+latinInput.addEventListener('keyup', () => {
     const latinInput = document.getElementById('latinInput').value;
     const cyrillicOutput = latinToCyrillic(latinInput);
     document.getElementById('cyrillicOutput').value = cyrillicOutput;
